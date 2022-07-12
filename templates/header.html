@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <title>CRUD</title>
+    <style>
+        body{
+            background-image: url(/ImagenesVarias/54f7483e88f1c.jpg);
+        }
+        nav, .card-header{
+            background-image: linear-gradient(to right, #BF626C, #dc9097);
+            color:bisque
+        }
+        .navbar-brand{
+            font-size:xx-large;
+            font-family: 'Libre Baskerville', serif;
+        }
+        .nav-link{
+            color: rgb(236, 178, 101);
+            font-size:x-large
+        }
+        .nav-link:hover{
+            color: rgb(236, 178, 101);
+            border: 1px solid rgb(236, 178, 101);
+            border-radius: 15px;
+
+        }
+        .table-striped tbody tr:nth-of-type(odd){
+            background-color: #722f37;
+            color:bisque
+        }
+        .table-striped tbody tr:nth-of-type(even){
+            background-color: #BF4E5C;
+            color:bisque
+        }
+        thead {
+            background-color:#331518;
+            color:bisque
+        }
+        .table-hover tbody tr:hover{
+            background-color:#2F733E;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand">Mi Bodega</a>
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{url_for("index")}}"> Vinos </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="<div class="container-fluid" style="background-color:lightyellow ;">
+        <div class="container">

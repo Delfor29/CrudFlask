@@ -1,0 +1,40 @@
+{% include 'header.html' %}
+    <br>
+    <a href="{{url_for('create')}}" class="btn btn-success">
+        Ingresar nuevo item
+    </a>
+    <br>
+    <br>
+    <table class="table table-striped table-hover">
+        <thead class="text-center text-uppercase">
+            <tr>
+                <th>#</th>
+                <th>Etiqueta</th>
+                <th>Nombre</th>
+                <th>Color</th>
+                <th>Cepa</th>
+                <th>Bodega</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            {% for vino in vinos %}
+            <tr>
+                <td>{{vino[0]}}</td>
+                <td>
+                    <img class="img-thumbnail" width="100" src="uploads/{{vino[5]}}" alt="">
+                </td>
+                <td>{{vino[1]}}</td>
+                <td>{{vino[2]}}</td>
+                <td>{{vino[3]}}</td>
+                <td>{{vino[4]}}</td>
+                <td>
+                    <a class="btn btn-warning" href="/edit/{{vino[0]}}" class=""> Editar </a>
+                     | 
+                    <a class="btn btn-danger" onclick="return confirm('Desea borrar este item?')" href="/destroy/{{vino[0]}}"> Borrar </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% include 'footer.html' %}

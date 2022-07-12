@@ -1,0 +1,48 @@
+{% include 'header.html' %}
+{% for vino in vinos %}
+<br>
+<br>
+<form method="post" action="/update" enctype="multipart/form-data">
+
+    <div class="card">
+        <div class="card-header text-center text-uppercase shadow p-3 mb-5 bg-body rounded">
+            Editar
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Descripción del vino</h5>
+            <p class="card-text">
+                <input type="hidden" value="{{vino[0]}}"name="txtID" id="txtID">
+                <div class="form-group">
+                    <label for="txtNombre">Nombre: </label>
+                    <input id="txtNombre" class="form-control" type="text" name="txtNombre" value="{{vino[1]}}">
+                </div>
+                <div class="form-group">
+                    <label for="txtColor">Color: </label>
+                    <input id="txtColor" class="form-control" type="text" name="txtColor" value="{{vino[2]}}">
+                </div>
+                <div class="form-group">
+                    <label for="txtCepa">Cepa: </label>
+                    <input id="txtCepa" class="form-control" type="text" name="txtCepa" value="{{vino[3]}}">
+                </div>
+                <div class="form-group">
+                    <label for="txtBodega">Bodega: </label>
+                    <input id="txtBodega" class="form-control" type="text" name="txtBodega" value="{{vino[4]}}">
+                </div>
+                <div class="form-group">
+                    <label for="txtEtiqueta">Etiqueta: </label>
+                    <img class="img-thumbnail" width="100" src="{{url_for("uploads", nombreEtiqueta=vino[5])}}" alt=""> 
+                    <input id="txtEtiqueta class="form-control" type="file" name="txtEtiqueta">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Guardar" class="btn btn-success">
+                    <a href="{{url_for('index')}}" class="btn btn-primary"> Regresar </a>
+
+                </div>
+            </p>
+        </div>
+    </div>
+</form>
+<br>
+<br>
+{% endfor %}
+{% include 'footer.html' %}
