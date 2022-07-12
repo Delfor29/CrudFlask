@@ -92,7 +92,7 @@ def update():
     _etiqueta=request.files['txtEtiqueta']
     id=request.form['txtID']
     query="UPDATE `bebidas alcoholicas`.`vinos2` SET `nombre`=%s, `color`=%s, `cepa`=%s, `bodega`=%s WHERE id=%s;"
-    datos=(_nombre, _color, _cepa, _bodega, id) F
+    datos=(_nombre, _color, _cepa, _bodega, id)
 
     #ACTUALIZACION DE FOTO SI ES NECESARIO
     conn=mysql.connect()
